@@ -12,24 +12,24 @@ Demonstration:
 
 $ ansible-playbook -i experiment redis_service.yml
 
-PLAY [redis - install] ******************************************************** 
-
-GATHERING FACTS *************************************************************** 
-ok: [localhost]
-
-TASK: [redis - Install redis] ************************************************* 
-ok: [localhost] => {"item": "", "msg": "Installing redis"}
-
-PLAY [redis - ghost service] ************************************************** 
-
-TASK: [redis service - debug] ************************************************* 
-ok: [localhost] => {"item": "", "msg": "set up redis service logstash on port 6379"}
-
-PLAY [redis - logstash service] *********************************************** 
-
-TASK: [redis service - debug] ************************************************* 
-ok: [localhost] => {"item": "", "msg": "set up redis service logstash on port 6379"}
-
-PLAY RECAP ******************************************************************** 
-localhost                  : ok=4    changed=0    unreachable=0    failed=0   
-
+    PLAY [redis - install] ******************************************************** 
+    
+    GATHERING FACTS *************************************************************** 
+    ok: [localhost]
+    
+    TASK: [redis - Install redis] ************************************************* 
+    ok: [localhost] => {"item": "", "msg": "Installing redis"}
+    
+    PLAY [redis - ghost service] ************************************************** 
+    
+    TASK: [redis service - debug] ************************************************* 
+    ok: [localhost] => {"item": "", "msg": "set up redis service logstash on port 6379"}
+    
+    PLAY [redis - logstash service] *********************************************** 
+    
+    TASK: [redis service - debug] ************************************************* 
+    ok: [localhost] => {"item": "", "msg": "set up redis service logstash on port 6379"}
+    
+    PLAY RECAP ******************************************************************** 
+    localhost                  : ok=4    changed=0    unreachable=0    failed=0   
+    
