@@ -1,5 +1,0 @@
----
-- name:  install redis
-  hosts: redis_ghost:redis_logstash
-  roles:
-  - redis/install
