@@ -1,12 +1,11 @@
 # Running multiple Redis on one server
 
 I am trying to run two instances of Redis on a single machine, setting them up
-with different ports via ANsible 1.3, but have hit a problem.  The group variables
-are not being picked up the way I think they should be.
+with different ports via ANsible 1.3, but have hit a problem.  
 
 group_vars/redis_ghost.yml and group_vars/redis_logstash.yml set the 'name' and 'port' 
 for each service I want to run, but it looks like they are not being picked up
-perperly for each play.
+properly for each play.
 
 Demonstration:
 
