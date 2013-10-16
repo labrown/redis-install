@@ -10,8 +10,8 @@ perperly for each play.
 
 Demonstration:
 
-$ ansible-playbook -i experiment redis_service.yml
-
+    $ ansible-playbook -i experiment redis_service.yml
+    
     PLAY [redis - install] ******************************************************** 
     
     GATHERING FACTS *************************************************************** 
