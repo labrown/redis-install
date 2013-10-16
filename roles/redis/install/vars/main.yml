@@ -1,0 +1,11 @@
+---
+redis: 
+    version:    2.6.14
+    file:       "redis-${redis.version}"
+    tarball:    "${redis.file}.tar.gz"
+    url:        "http://redis.googlecode.com/files/${redis.tarball}"
+    dir:        /usr/local/redis
+    builddir:   /usr/local/src
+    configdir:  "${redis.dir}/etc"
+    vardir:     "${redis.dir}/var"
+    logdir:     "${redis.dir}/log"

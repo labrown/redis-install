@@ -1,0 +1,15 @@
+---
+- name:  redis - install
+  hosts: redis_ghost:redis_logstash
+  roles:
+  - { role: redis/install }
+
+- name:  redis - ghost service
+  hosts: redis_ghost
+  roles:
+  - { role: redis/service }
+
+- name:  redis - logstash service
+  hosts: redis_logstash
+  roles:
+  - { role: redis/service }

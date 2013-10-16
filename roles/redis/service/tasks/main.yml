@@ -1,0 +1,6 @@
+# Install Redis on a server
+---
+- name: redis service - debug
+  debug: msg="set up redis service {{redis.name}} on port {{redis.port}}"
+  tags:
+  - debug

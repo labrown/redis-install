@@ -1,0 +1,56 @@
+# Install Redis on a server
+---
+- name: redis - Install redis
+  debug: msg="Installing redis"
+  tags:
+  - debug
+
+# - name: redis - Install required packages
+#   yum: name={{item}} state=latest
+#   with_items:
+#   - make
+#   - gcc
+#   tags:
+#   - redis
+
+# - name: redis - Create redis directories
+#   file: dest={{ item }} owner=root group=root mode=755 state=directory
+#   with_items:
+#   - "{{ redis.dir }}"
+#   - "{{ redis.configdir }}"
+#   - "{{ redis.vardir }}"
+#   - "{{ redis.logdir }}"
+#   - "{{ redis.builddir }}"
+#   tags:
+#   - redis
+#   - dirs
+
+# - name: redis - get redis tarball
+#   get_url: url={{ redis.url }} dest={{ redis.builddir }}/{{ redis.tarball }}
+#   tags:
+#   - redis
+
+# - name: redis - untar and defeather redis tarball
+#   command: creates={{ redis.builddir }}/{{ redis.file }} tar -C {{redis.builddir}} -xzvf {{ redis.builddir }}/{{ redis.tarball }}
+#   tags:
+#   - redis
+
+# - name: redis - build redis
+#   shell: chdir={{ redis.builddir }}/{{ redis.file }} creates={{ redis.builddir }}/{{redis.file}}/src/redis-server make
+#   tags:
+#   - redis
+
+# - name: redis - install redis-server
+#   command: install {{ redis.builddir }}/{{redis.file}}/src/redis-server {{ redis.dir }}
+#   tags:
+#   - redis
+
+# - name: redis - install redis-cli
+#   command: install {{ redis.builddir }}/{{redis.file}}/src/redis-cli {{ redis.dir }}
+#   tags:
+#   - redis
+
+# - name: redis - symlink {{ redis.dir }}/redis-cli into /usr/local/bin
+#   file: src={{ redis.dir }}/redis-cli dest=/usr/local/bin/redis-cli state=link
+#   tags:
+#   - redis

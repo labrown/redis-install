@@ -1,0 +1,4 @@
+---
+redis:
+    name: ghost
+    port: 6380

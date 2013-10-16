@@ -1,0 +1,4 @@
+---
+redis:
+    name: logstash
+    port: 6379

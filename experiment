@@ -1,0 +1,5 @@
+[redis_ghost]
+localhost 
+
+[redis_logstash]
+localhost
